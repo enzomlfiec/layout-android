@@ -1,0 +1,35 @@
+package com.example.streamflix;
+
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class MainActivity extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+
+    int[] movies = {
+            R.drawable.movie1,
+            R.drawable.movie2,
+            R.drawable.movie3
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        recyclerView = findViewById(R.id.recyclerMovies);
+
+        recyclerView.setLayoutManager(
+                new LinearLayoutManager(this,
+                        LinearLayoutManager.HORIZONTAL,
+                        false)
+        );
+
+        MovieAdapter adapter = new MovieAdapter(this, movies);
+        recyclerView.setAdapter(adapter);
+    }
+}
