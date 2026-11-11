@@ -10,7 +10,3 @@ Repositório com os dois projetos do roteiro `Tutorial_LayoutAndroid`:
 ## Como executar
 1. Android Studio → **File > Open** → escolha a pasta `AppModerno` ou `StreamFlix`.
 2. Aguarde o *Gradle Sync* e rode em um emulador/dispositivo (API 24+).
-
-## Observações
-- As imagens `banner.jpg` e `movie1..3.jpg` do `StreamFlix` são *placeholders*; substitua por imagens reais (de preferência WebP) em `res/drawable/`.
-- No `item_movie.xml` foi adicionado `xmlns:app`, ausente no roteiro e necessário para os atributos `app:cardCornerRadius` e `app:cardElevation`.
